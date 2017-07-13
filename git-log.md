@@ -1,5 +1,5 @@
 ### git log
-Muestra el historial de commit
+Muestra el historial de commit del proyecto
 
 `git log --pretty=format:"%h - %an, %ar : %s"`
 Muestra el historial en el formato que indicamos.
