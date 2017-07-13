@@ -81,3 +81,18 @@ git mv <tuarchivo> <nuevonombre>
 
 -- Descartar un archivo modificado (deshacer)
 git checkout -- <file>
+
+-- Etiquetar un commit
+git tag (lista las etiquetas generadas)
+git tag mi-etiqueta (agrega una etiqueta al último commit)
+git tag mi-etiqueta 86dec27 (coloca una etiqueta en un punto de la historia)
+
+-- Etiqueta anotada (Se guardan en la base de datos de Git como objetos enteros)
+git tag -a v1.0 -m "tumensaje"
+
+-- Ver el detalle del commit según la etiqueta
+git show <mietiqueta>
+
+-- Crear nuevas ramas.
+git branch (lista las ramas y con * la rama actual donde estamos)
+git branch <tunuevarama> (se crea la nueva rama en el commit actual)
