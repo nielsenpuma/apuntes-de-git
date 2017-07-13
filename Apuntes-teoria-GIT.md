@@ -37,19 +37,47 @@ git commit -m "Primer commit"
 
 --Ver los commits en la línea de tiempo
 git log
+git log --oneline (muestra todos los commit en una sola linea)
+git log --oneline --graph (gráficamente muestras las ramas)
+git log -2 (muestra los dos últimos commit)
+git log --pretty=format:"%h - %an, %ar : %s" (formato personalizado el mostrar los commit)
+git log  --before="2017-07-12 15:00:00" (Muestra los commit antes de <fecha>)
+git log  --after="2017-07-12 13:00:00" (Muestra los commit después de <fecha>)
+git log  --after="2017-07-12 13:00:00" --before="2017-07-12 15:00:00" (Muestra commits dentro del rango)
 
 --Ver las diferencias del archivo modificado
 git diff
 git diff --staged (Cuando se modifica un archivo en la zona de preparación, es bueno ver los cambios, de acuerdo a eso hacer los commits necesarios)
+git diff <idcommit> <idcommit> (sirve para ver las diferencias entre un commit y otro)
 
 (Siempre es bueno con "git status" ver que el directorio de trabajo esté limpio -> working tree clean)
 
 -- Sacar un archivo de la zona de preparación.
 git reset HEAD <tuarchivo> (Vuelve el archivo a la zona de directorio de trabajo)
+Cuando quieres sacar un archivo(s) de la zona de preparación.
 
 -- Si se equivoca en el mensaje de un commit
-git commit --amend (Preferencia con editor VIM para modificar)
+git commit --amend (Preferencia con editor VIM para modificar, reace la confirmación o commit)
+
+Este comando utiliza el área de preparación para la confirmación. Al final terminarás con una sola confirmación - la segunda confirmación reemplaza al resultado de la primera.
+
+Si no hemos hecjo cambios desde la última confirmación, entonces la instantánea o el commit lucirá exactamente igual y lo único que cambiaremos el mensaje del commit.
 
 -- Para ignorar archivos .gitignore
 1. Se crea el archivo .gitignore
 2. Dentro de agregan los archivos a ser ignorados y no les tomará en cuenta al momento del ADD o COMMIT
+
+-- Elimina archivos
+git rm (Elimina definitivamente del historial de git)
+
+-- Restaurar un fichero eliminado por software
+git checkout <tuarhivo>
+también sirve para moverse dentre de la historia, ejemplo:
+git checkout 7d72503, donde los números es el hash de los commit (el pasado)
+git checkout master -> Regresando al presente.
+
+-- Renombrar los archivos
+git mv <tuarchivo> <nuevonombre>
+
+-- Descartar un archivo modificado (deshacer)
+git checkout -- <file>
