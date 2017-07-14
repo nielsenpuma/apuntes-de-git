@@ -75,6 +75,7 @@ git checkout <tuarhivo>
 también sirve para moverse dentre de la historia, ejemplo:
 git checkout 7d72503, donde los números es el hash de los commit (el pasado)
 git checkout master -> Regresando al presente.
+git checkout -b <turama> -> Permite crear la rama anterior, siempre y cuando estemos ubicados en hash de la supuesta rama.
 
 -- Renombrar los archivos
 git mv <tuarchivo> <nuevonombre>
@@ -86,6 +87,7 @@ git checkout -- <file>
 git tag (lista las etiquetas generadas)
 git tag mi-etiqueta (agrega una etiqueta al último commit)
 git tag mi-etiqueta 86dec27 (coloca una etiqueta en un punto de la historia)
+git tag -d <mi-etiqueta> Eliminamos una etiqueta
 
 -- Etiqueta anotada (Se guardan en la base de datos de Git como objetos enteros)
 git tag -a v1.0 -m "tumensaje"
@@ -95,4 +97,14 @@ git show <mietiqueta>
 
 -- Crear nuevas ramas.
 git branch (lista las ramas y con * la rama actual donde estamos)
+git branch -v (Lista las últimos commit de todas las ramas)
 git branch <tunuevarama> (se crea la nueva rama en el commit actual)
+
+-- Fusiones de ramas con la principal
+git merge <nombre-rama> (fusiona una rama con la rama actual)
+
+--Eliminar una rama si ya ha sido fusionada
+git branch -d <nombre-rama>
+git branch -D <nombre-rama> (Elimina una rama esté o no esté fusionada. OJO)
+git branch --no-merged (lista ramas que no han sido fusionadas a la rama actual)
+git branch --merged (lista las ramas que han sido fusionadas)
