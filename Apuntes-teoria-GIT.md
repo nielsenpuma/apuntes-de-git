@@ -108,3 +108,14 @@ git branch -d <nombre-rama>
 git branch -D <nombre-rama> (Elimina una rama esté o no esté fusionada. OJO)
 git branch --no-merged (lista ramas que no han sido fusionadas a la rama actual)
 git branch --merged (lista las ramas que han sido fusionadas)
+
+### Subir a un repositorio remoto
+git remote add origin <tucuentadegit>
+
+### Fork a un repositorio
+git clon <url-de-repositorio-original>
+
+Cuando se clona un repositorio, si se quiere aportar es bueno crear una nueva rama y trabajar ahi.
+git branch -b <nueva-rama-aporte>
+
+git push origin <tu-rama> (subes tu aporte en una nueva rama en el repositorio)
