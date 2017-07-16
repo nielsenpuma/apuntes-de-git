@@ -1,2 +1,2 @@
-### Git add
+# Git add
 Agrega un archivo a la zona de preparación (stage).
