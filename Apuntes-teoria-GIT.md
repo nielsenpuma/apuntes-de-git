@@ -119,3 +119,6 @@ Cuando se clona un repositorio, si se quiere aportar es bueno crear una nueva ra
 git branch -b <nueva-rama-aporte>
 
 git push origin <tu-rama> (subes tu aporte en una nueva rama en el repositorio)
+
+### Editor SourceTree
+Si se tiene una rama, antes de subir al Git se tiene que ubicar primero en la rama Master del repositorio remoto y recién darle un Push.
